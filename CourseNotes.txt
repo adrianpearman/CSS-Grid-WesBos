@@ -1,0 +1,30 @@
+CSS GRID
+Fundamentals:
+Tkaing an element and putting it rows and columns (tracks) and then laying the elements within anywhere within it.
+
+Examples:
+.container{
+      display: grid; - /* this sets the element to use the grid styling */
+      grid-template-columns: 200px 500px 100px; - /* the sum of grid-template columns is overall width of containing grid  */
+      grid-gap: 20px; - /* adds space between the elements */
+      grid-template-rows: 200px 100px 300px - /* this will set the height of each of the rows */
+} 
+
+DevTools:
+Firefox currently has the best devtools for debugging any issues with CSS Grid. Chrome currently has an option available but not quite as good (as of now).
+
+Implicit - The initial height or width set by CSS grid
+Explicit - Defining exactly what the height or width of an element.
+
+Example:
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 200px 400px; - /* */
+      grid-template-rows: 50px 100px; - /* */
+      grid-auto-rows: 200px; - /* Any row after the explicit tracks will inherit this height*/
+      grid-auto-flow: column; - /* Any column after the explicit tracks will inherit this width. Essentially creates a horizontal scroll if theres enough elements   */
+    }
+
+'%' are not the best use case for defining an element width or height. For CSS grid, the 'fr' (fractional units) is used to dictate free space allocation. They can definitely be used as well with '%', 'element', 'rem' and pxs; however it wont automatically calculate the remaining space leaving the possibility of the elements not displaying as desired.
+
