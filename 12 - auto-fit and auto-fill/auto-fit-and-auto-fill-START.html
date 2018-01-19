@@ -37,6 +37,10 @@
       display: grid;
       grid-gap: 20px;
       border: 10px solid var(--yellow);
+      /* auto fill will fit as many as possible with in the grid layout */
+      grid-template-columns: repeat(auto-fill, 150px)
+      /* auto fit is the same as fill but will no push past the explicit tracks set */
+      /* grid-template-columns: repeat(auto-fit, 150px) */
     }
   </style>
 </body>

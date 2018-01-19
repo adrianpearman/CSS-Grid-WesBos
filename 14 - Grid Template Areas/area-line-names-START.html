@@ -39,13 +39,23 @@
     <div class="item item27">27</div>
     <div class="item item28">28</div>
     <div class="item item29">29</div>
-    <div class="item item30">30</div>
+    <div class="item item30">30 </div>
   </div>
 
   <style>
     .container {
       display: grid;
       grid-gap: 20px;
+      grid-template-areas:
+       "eggs eggs eggs eggs bacon bacon bacon bacon"
+       "eggs eggs eggs eggs bacon bacon bacon bacon"
+       "eggs eggs eggs eggs bacon bacon bacon bacon"
+       "eggs eggs eggs eggs bacon bacon bacon bacon"
+    }
+
+    .item3{
+      grid-column: eggs-start / bacon-end;
+      grid-row-end: bacon-end
     }
   </style>
 </body>
