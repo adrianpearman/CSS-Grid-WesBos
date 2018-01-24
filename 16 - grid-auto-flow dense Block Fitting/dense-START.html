@@ -86,6 +86,30 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      /* with the styling on the 6th child, each of those elements would  */
+      grid-template-columns: repeat(10, 1fr);
+      /* dense will try to keep unified shape by moving items to maintain the explicit grid tracks. */
+      grid-auto-flow: dense
+    }
+
+    .item:nth-child(6n){
+      background-color: cornflowerblue;
+      grid-column: span 6
+    }
+
+    .item:nth-child(8n){
+      background-color: tomato;
+      grid-column: span 1
+    }
+
+    .item:nth-child(9n){
+      grid-row: span 2
+    }
+
+    .item18{
+      /* the '!important keyword will force the element to go its designated position */
+      background-color: greenyellow !important;
+      grid-column-end: -1 !important
     }
   </style>
 </body>

@@ -24,7 +24,12 @@
   </div>
 
   <style>
-    .unknown {}
+    /* will allow for sitre to consider the width of each element and make space for each of the items */
+    .unknown {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+      grid-gap: 20px;
+    }
   </style>
 </body>
 

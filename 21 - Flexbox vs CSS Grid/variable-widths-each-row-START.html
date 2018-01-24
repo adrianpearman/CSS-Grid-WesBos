@@ -21,10 +21,17 @@
     <div class="item">Short</div>
   </div>
   <style>
-    .flex-container {}
+    /* currently Flex Box is the better option for this use case do to browser support.
+    it is possible to do this section in grid as well */
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      border: 1px solid black
+    }
 
     .flex-container>* {
       margin: 10px;
+      flex: 1
     }
   </style>
 </body>

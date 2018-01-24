@@ -54,23 +54,28 @@
 
   <style>
     /*
-      justify-items:
-      align-items:
+    Distributes space between and around content items along the main axis of their container
+    justify-content:
+    align-content:
 
-      justify-content:
-      align-content:
-
-      align-self:
-      justify-self:
-
-      justify-* is row axis
-      align-* is column axis
-    */
+    Justifying a box inside its container along the appropriate axis.
+    align-self: 
+    justify-self:
+  */  
 
     .container {
       display: grid;
       grid-gap: 20px;
       grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: repeat(5, 100px);
+       /* row or x axis placement. values available for this include: start, end, center and stretch*/
+      justify-items: center;
+       /* column or y axis placement. values available for this include: start, end, center and stretch*/
+      align-items: center;
+    }
+
+    .itm{
+      background-color: white;
     }
   </style>
 </body>

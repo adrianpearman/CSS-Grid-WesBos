@@ -21,6 +21,24 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      grid-template-columns: repeat(10, 1fr);
+    }
+
+    /* The 'order' property allows for items to be rearranged without having to change the mark up on the HTML elements. For accessibility concerns however, the screen reader will not read them in the new order, so be sure t have it effect elements that are not content driven pieces of data */
+
+    .logo{
+      grid-column: span 2;
+      order: 2
+    }
+
+    .nav{
+      grid-column: span 8;
+      order: 1
+    }
+
+    .content{
+      grid-column: 1/ -1;
+      order: 3
     }
   </style>
 </body>
